@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
     // fetch data from url and then use "then" method on return value
     // value of location is used as req.query.address
-        fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+        fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 return messageOne.textContent = data.error
